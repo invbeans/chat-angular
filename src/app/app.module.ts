@@ -8,6 +8,8 @@ import { MessageComponent } from './components/message/message.component';
 import { FriendListComponent } from './pages/friend-list/friend-list.component';
 import { DialogComponent } from './pages/dialog/dialog.component';
 import { MainPageComponent } from './pages/main-page/main-page.component';
+import { FriendBlockComponent } from './components/friend-block/friend-block.component';
+import { DialogBgComponent } from './components/dialog-bg/dialog-bg.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { MainPageComponent } from './pages/main-page/main-page.component';
     MessageComponent,
     FriendListComponent,
     DialogComponent,
-    MainPageComponent
+    MainPageComponent,
+    FriendBlockComponent,
+    DialogBgComponent
   ],
   imports: [
     BrowserModule,
