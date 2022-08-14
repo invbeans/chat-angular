@@ -1,1 +1,15 @@
-<p>message works!</p>
+<div
+  class="w-[200px] rounded mb-4 min-h-[50px] mr-2 ml-2"
+  [ngClass]="{
+    'bg-self-message': message.self,
+    'float-left': message.self,
+    'bg-other-message': !message.self,
+    'float-right': !message.self
+  }"
+>
+  <div class="px-4 py-2">
+    <p class="text-[.7rem]">{{message.nickname}} | {{date}}</p>
+    <p>{{message.text}}</p>
+
+  </div>
+</div>

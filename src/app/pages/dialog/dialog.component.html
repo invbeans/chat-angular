@@ -1,1 +1,5 @@
-<p>dialog works!</p>
+<div
+  class="flex flex-col justify-start w-[250px] absolute top-[40px] left-0 bottom-0 border border-gray-700 bg-friend-list">
+  <app-friend-block *ngFor="let friend of friends" [friend]="friend"></app-friend-block>
+</div>
+<app-dialog-bg></app-dialog-bg>
