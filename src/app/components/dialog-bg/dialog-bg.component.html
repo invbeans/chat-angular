@@ -1,5 +1,5 @@
 <div
-  class="absolute flex flex-col justify-end top-0 right-0 bottom-0 left-0 mt-[40px] ml-[250px] bg-dialog-bg text-sm"
+  class="relative overflow-y-scroll h-[83vh] max-h-[83vh] ml-[250px] flex flex-col justify-end bg-dialog-bg text-sm"
 >
-    <app-message *ngFor="let message of messages" [message]="message"></app-message>
+  <ng-content></ng-content>
 </div>
