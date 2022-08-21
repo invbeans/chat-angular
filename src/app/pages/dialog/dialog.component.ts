@@ -3,6 +3,7 @@ import { friendList } from 'src/app/data/friends-data';
 import { messageList } from 'src/app/data/message-data';
 import { IFriend } from 'src/app/models/friend';
 import { IMessage } from 'src/app/models/message';
+import { ModalService } from 'src/app/services/modal.service';
 
 @Component({
   selector: 'app-dialog',
@@ -11,12 +12,20 @@ import { IMessage } from 'src/app/models/message';
 })
 export class DialogComponent implements OnInit {
   friends: IFriend[] = [];
+  messages: IMessage[] = [];
 
-  constructor() { }
+  index = -1;
+
+  constructor(public modalService: ModalService) { }
 
   ngOnInit(): void {
     this.friends = friendList;
-    //или заменить потом на получение от сервиса
+    this.messages = messageList;
+  }
+
+  openModal(i: number){
+    this.index = i;
+    this.modalService.open();
   }
 
 }

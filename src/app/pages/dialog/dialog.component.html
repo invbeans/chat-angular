@@ -1,5 +1,20 @@
 <div
-  class="flex flex-col justify-start w-[250px] absolute top-[40px] left-0 bottom-0 border border-gray-700 bg-friend-list">
-  <app-friend-block *ngFor="let friend of friends" [friend]="friend"></app-friend-block>
+  class="flex flex-col justify-start w-[250px] absolute top-[40px] left-0 bottom-0 border border-gray-700 bg-friend-list"
+>
+  <app-friend-block
+    (click)="openModal(i)"
+    *ngFor="let friend of friends; let i = index"
+    [friend]="friend"
+    class="mb-2"
+  ></app-friend-block>
 </div>
-<app-dialog-bg></app-dialog-bg>
+<div>
+  <app-dialog-bg>
+    <app-message *ngFor="let message of messages" [message]="message"></app-message>
+    <app-dialog-input></app-dialog-input>
+  </app-dialog-bg>
+  <app-modal *ngIf="modalService.isOpen$ | async" title={{friends[index].nickname}}>
+    <app-modal-profile [friend]="friends[index]"></app-modal-profile>
+  </app-modal>
+</div>
+
