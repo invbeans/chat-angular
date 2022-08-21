@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { IFriend } from 'src/app/models/friend';
+import { ModalService } from 'src/app/services/modal.service';
 
 @Component({
   selector: 'app-friend-block',
@@ -9,7 +10,7 @@ import { IFriend } from 'src/app/models/friend';
 export class FriendBlockComponent implements OnInit {
   @Input() friend: IFriend;
 
-  constructor() { }
+  constructor(public modalService: ModalService) { }
 
   ngOnInit(): void {
   }
