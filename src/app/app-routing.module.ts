@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DialogComponent } from './dialog/dialog.component';
-import { FriendListComponent } from './friend-list/friend-list.component';
-import { MainPageComponent } from './main-page/main-page.component';
 
 const routes: Routes = [
-  {path: '', component: MainPageComponent},
-  {path: 'dialog', component: DialogComponent},
-  {path: 'friends', component: FriendListComponent}
+  {path: '',
+  loadChildren: () => import('./main-page/main-page.module').then(m => m.MainPageModule)
+  },
+  {path: 'dialog',
+  loadChildren: () => import('./dialog/dialog.module').then(m => m.DialogModule)
+  },
+  {path: 'friends',
+  loadChildren: () => import('./friend-list/friend.module').then(m => m.FriendModule)
+  }
 ];
 
 @NgModule({
