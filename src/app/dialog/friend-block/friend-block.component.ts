@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IFriend } from 'src/app/models/friend';
-import { ModalService } from 'src/app/services/modal.service';
+import { IFriend } from 'src/app/shared/models/friend';
+import { ModalService } from 'src/app/shared/services/modal.service';
 
 @Component({
   selector: 'app-friend-block',

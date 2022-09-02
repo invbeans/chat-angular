@@ -1,4 +1,4 @@
-import {IFriend} from 'src/app/models/friend';
+import {IFriend} from '../models/friend';
 
 export const friendList: IFriend[] = [
   {id: 1, nickname: 'nickname', age: 22, about: 'Dansa med oss, klappa era händer', pfp: 'https://i.pinimg.com/736x/80/3d/8c/803d8c77e9b841c99a3711d2abf5502c.jpg'},

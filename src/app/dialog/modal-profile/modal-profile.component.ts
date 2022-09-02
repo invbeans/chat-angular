@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IFriend } from 'src/app/models/friend';
+import { IFriend } from 'src/app/shared/models/friend';
 
 @Component({
   selector: 'app-modal-profile',

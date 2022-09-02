@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { friendList } from 'src/app/data/friends-data';
-import { messageList } from 'src/app/data/message-data';
-import { IFriend } from 'src/app/models/friend';
-import { IMessage } from 'src/app/models/message';
-import { ModalService } from 'src/app/services/modal.service';
+import { friendList } from 'src/app/shared/data/friends-data';
+import { messageList } from 'src/app/shared/data/message-data';
+import { IFriend } from 'src/app/shared/models/friend';
+import { IMessage } from 'src/app/shared/models/message';
+import { ModalService } from 'src/app/shared/services/modal.service';
 
 @Component({
   selector: 'app-dialog',
