@@ -1,5 +1,8 @@
 <app-self-profile
-
+  (isModal)="openModal($event)"
   [user]="user"
 ></app-self-profile>
+<app-modal *ngIf="modalService.isOpen$ | async" title="Edit profile">
+  <p>Mock for now</p>
+</app-modal>
 

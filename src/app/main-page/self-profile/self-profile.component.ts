@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IFriend } from 'src/app/shared/models/friend';
 
 @Component({
@@ -9,9 +9,14 @@ import { IFriend } from 'src/app/shared/models/friend';
 export class SelfProfileComponent implements OnInit {
 
   @Input() user: IFriend;
+  @Output() isModal: EventEmitter<boolean> = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  openModal(flag: boolean){
+    this.isModal.emit(true);
   }
 
 }

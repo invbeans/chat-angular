@@ -9,11 +9,12 @@ module.exports = {
         'nav-div': '#4f807d',
         'global-bg': '#486b69',
         'dialog-bg': '#93c9c6',
-        'other-message': '#529c7c',
-        'self-message': '#989c52',
+        'other-message': '#989c52',
+        'self-message': '#529c7c',
         'modal-bg': '#739c99',
         'modal-button': '#557d76',
-        'dialog-input': '#35403f'
+        'dialog-input': '#35403f',
+        'edit-button': '#bf9c4b'
 
       }
     },
