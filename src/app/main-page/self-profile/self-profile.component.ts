@@ -15,7 +15,7 @@ export class SelfProfileComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  openModal(flag: boolean){
+  openModal(){
     this.isModal.emit(true);
   }
 
