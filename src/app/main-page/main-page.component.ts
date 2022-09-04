@@ -17,7 +17,11 @@ export class MainPageComponent implements OnInit {
     this.user = friendList[2];
   }
 
-  openModal(flag: boolean){
+  openModal(){
     this.modalService.open();
+  }
+
+  closeModal(){
+    this.modalService.close();
   }
 }

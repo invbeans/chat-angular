@@ -1,0 +1,33 @@
+<div class="min-h-fit mb-10 ml-5 text-sm">
+  <form
+    [formGroup]="form"
+    class="flex flex-col"
+  >
+  <input
+    type="text"
+    formControlName="nickname"
+    class="w-[80%] py-2 pl-3 mb-3 text-black bg-modal-input border-none outline-none"
+    placeholder={{user.nickname}}
+  >
+  <input
+    type="text"
+    formControlName="age"
+    class="w-[80%] py-2 pl-3 mb-3 text-black bg-modal-input border-none outline-none"
+    placeholder={{user.age}}
+  >
+  <input
+    type="text"
+    formControlName="about"
+    class="w-[80%] py-2 pl-3 mb-3 text-black bg-modal-input border-none outline-none"
+    placeholder={{user.about}}
+  >
+  <!-- won't work until I'll add services -->
+  <button class="border w-fit border-gray-700 px-3 py-1 bg-modal-button mb-3">Change profile picture</button>
+  <button
+    type="submit"
+    [disabled]="disabled"
+    class="border w-fit border-gray-700 px-3 py-1 bg-modal-button"
+    (click)="onClick()"
+  >Save changes</button>
+</form>
+</div>
