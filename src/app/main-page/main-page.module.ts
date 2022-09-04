@@ -4,7 +4,7 @@ import { MainPageComponent } from './main-page.component';
 import { MainPageRoutingModule } from './main-page-routing.module';
 import { SelfProfileComponent } from './self-profile/self-profile.component';
 import { SharedModule } from '../shared/shared.module';
-import { EditProfileComponent } from './edit-profile/edit-profile/edit-profile.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
