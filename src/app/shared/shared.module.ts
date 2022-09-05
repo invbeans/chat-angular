@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ModalComponent } from './components/modal/modal.component';
-import { ScrollBarComponent } from './components/scroll-bar/scroll-bar.component';
 import { FocusDirective } from './directives/focus.directive';
 import { ModalService } from './services/modal.service';
 
@@ -11,7 +10,6 @@ import { ModalService } from './services/modal.service';
   ],
   declarations: [
     ModalComponent,
-    ScrollBarComponent,
     FocusDirective
   ],
   providers: [
@@ -19,7 +17,6 @@ import { ModalService } from './services/modal.service';
   ],
   exports: [
     ModalComponent,
-    ScrollBarComponent,
     FocusDirective
   ]
 })
