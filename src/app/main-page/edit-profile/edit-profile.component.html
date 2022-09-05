@@ -9,23 +9,35 @@
     class="w-[80%] py-2 pl-3 mb-3 text-black bg-modal-input border-none outline-none"
     placeholder={{user.nickname}}
   >
+  <div
+    *ngIf="form.controls['nickname'].invalid && (form.controls['nickname'].dirty || form.controls['nickname'].touched)"
+    class="text-red-700 mb-3"
+  >Don't start with numbers and exclude symbols '#', '@'. Min length is 2</div>
   <input
     type="text"
     formControlName="age"
     class="w-[80%] py-2 pl-3 mb-3 text-black bg-modal-input border-none outline-none"
     placeholder={{user.age}}
   >
-  <input
+  <div
+    *ngIf="form.controls['age'].invalid && (form.controls['age'].dirty || form.controls['age'].touched)"
+    class="text-red-700 mb-3"
+  >Invalid age</div>
+  <textarea
     type="text"
     formControlName="about"
     class="w-[80%] py-2 pl-3 mb-3 text-black bg-modal-input border-none outline-none"
     placeholder={{user.about}}
-  >
+  ></textarea>
+  <div
+    *ngIf="form.controls['about'].invalid && (form.controls['about'].dirty || form.controls['about'].touched)"
+    class="text-red-700 mb-3"
+  >Max size is 150 symbols</div>
   <!-- won't work until I'll add services -->
   <button class="border w-fit border-gray-700 px-3 py-1 bg-modal-button mb-3">Change profile picture</button>
   <button
     type="submit"
-    [disabled]="disabled"
+    [disabled]="form.invalid"
     class="border w-fit border-gray-700 px-3 py-1 bg-modal-button"
     (click)="onClick()"
   >Save changes</button>

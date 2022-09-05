@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { IFriend } from 'src/app/shared/models/friend';
 
 @Component({
@@ -11,14 +11,23 @@ export class EditProfileComponent implements OnInit {
   @Input() user: IFriend;
   @Output() closeModal: EventEmitter<boolean> = new EventEmitter();
 
-  form = new FormGroup({
-    nickname: new FormControl(''),
-    age: new FormControl(''),
-    about: new FormControl('')
-  })
-  disabled: boolean = false;
+  form: FormGroup;
 
-  constructor() { }
+  constructor() {
+    this.form = new FormGroup({
+      nickname: new FormControl('', [
+        Validators.pattern('^[^0-9][^@#]*$'),
+        Validators.minLength(2)
+      ]),
+      age: new FormControl('', [
+        Validators.min(1),
+        Validators.max(150),
+        Validators.pattern('^[0-9]*$')
+      ]),
+      about: new FormControl('',
+      Validators.maxLength(150))
+    })
+  }
 
   ngOnInit(): void {
   }
