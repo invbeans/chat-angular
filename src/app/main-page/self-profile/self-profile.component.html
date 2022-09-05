@@ -1,5 +1,5 @@
 <div class="absolute left-0 bottom-0 bg-slate-300 top-[7vh] w-[50%]">
-  <div class="flex flex-row mt-[20px]">
+  <div class="flex flex-row mt-[20px] ml-5">
     <img src="{{user.pfp}}" class="h-[160px] rounded-full">
     <div class="flex flex-col ml-[30px]">
       <h1 class="text-lg">{{user.nickname}}</h1>
@@ -7,7 +7,7 @@
     </div>
   </div>
   <div
-    class="fixed flex justify-center left-0 top-[160px] rounded-full h-[30px] w-[30px] bg-edit-button"
+    class="fixed flex justify-center left-0 top-[160px] ml-5 rounded-full h-[30px] w-[30px] bg-edit-button"
     (click)="openModal()"
   >
     <img src="https://www.svgrepo.com/show/42233/pencil-edit-button.svg" class="w-[20px]">
