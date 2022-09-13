@@ -15,7 +15,8 @@ module.exports = {
         'modal-button': '#557d76',
         'modal-input': '#9bccc2',
         'dialog-input': '#35403f',
-        'edit-button': '#bf9c4b'
+        'edit-button': '#bf9c4b',
+        'search-div': '#ad984c'
 
       }
     },
