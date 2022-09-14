@@ -1,10 +1,7 @@
 
 <div class="w-full h-full min-h-fit">
   <app-friend-feed>
-    <app-friend-search-block></app-friend-search-block>
-    <app-friend-search-block></app-friend-search-block>
-    <app-friend-search-block></app-friend-search-block>
-    <app-friend-search-block></app-friend-search-block>
+    <app-friend-search-block *ngFor="let friend of friends" [friend]="friend"></app-friend-search-block>
   </app-friend-feed>
   <app-search-bar></app-search-bar>
 </div>

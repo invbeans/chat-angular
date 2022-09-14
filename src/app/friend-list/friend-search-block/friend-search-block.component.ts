@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { IFriend } from 'src/app/shared/models/friend';
 
 @Component({
   selector: 'app-friend-search-block',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./friend-search-block.component.css']
 })
 export class FriendSearchBlockComponent implements OnInit {
-
+  @Input() friend: IFriend;
   constructor() { }
 
   ngOnInit(): void {

@@ -1,4 +1,13 @@
-<div class="h-[300px] my-2 bg-friend-block">
-  <p>fish text</p>
-  <p>friends info here</p>
+<div class="flex flex-row h-[30vh] my-2 bg-friend-block pt-3 pl-3 shadow-lg">
+  <img
+    src="{{friend.pfp}}"
+    class="rounded-full h-[22vh] shadow-lg"
+  >
+  <div class="flex flex-col pl-5 justify-between">
+    <p>{{friend.nickname}}</p>
+    <div class="flex flex-row text-sm pb-5">
+      <a>Message</a>
+      <a class="pl-10">Info</a>
+    </div>
+  </div>
 </div>

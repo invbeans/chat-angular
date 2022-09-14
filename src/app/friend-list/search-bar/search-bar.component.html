@@ -1,3 +1,13 @@
-<div class="fixed top-[7vh] left-0 right-0 flex justify-center w-full h-[8vh] bg-search-div">
-  <input type="text" appFocus class="h-[6vh] mt-1 w-[55%] outline-none text-sm pl-2">
+<div
+  [formGroup]="form"
+  class="fixed top-[7vh] left-0 right-0 flex justify-center w-full h-[8vh] bg-search-div shadow-lg"
+>
+  <input
+    type="text"
+    appFocus class="h-[6vh] mt-1 w-[50%] outline-none text-sm pl-2 text-sm"
+    formControlName="search"
+  >
+  <button
+    class="w-[5%] bg-search-button mt-1 ml-1 py-2 px-1 h-[6vh] text-sm"
+  >Find</button>
 </div>

@@ -6,12 +6,15 @@ import { SharedModule } from '../shared/shared.module';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { FriendFeedComponent } from './friend-feed/friend-feed.component';
 import { FriendSearchBlockComponent } from './friend-search-block/friend-search-block.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     FriendRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [FriendListComponent, SearchBarComponent, FriendFeedComponent, FriendSearchBlockComponent]
 })
