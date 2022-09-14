@@ -5,4 +5,18 @@
 html,
 body {
   height: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: #a1984c #486b69;
+}
+
+body::-webkit-scrollbar {
+  width: 11px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #486b69;
+}
+
+body::-webkit-scrollbar-thumb{
+  background-color: #a1984c;
 }

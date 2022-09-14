@@ -16,6 +16,7 @@ module.exports = {
         'modal-input': '#9bccc2',
         'dialog-input': '#35403f',
         'edit-button': '#bf9c4b',
+        'self-profile-bg': "#98b5b3",
         'search-div': '#ad984c',
         'search-button': '#dbb658',
 
