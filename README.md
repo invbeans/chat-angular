@@ -1,3 +1,7 @@
+## To see project:
+
+On Heroku: https://chat-project-invbeans.herokuapp.com/
+
 # ChatProject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.1.
