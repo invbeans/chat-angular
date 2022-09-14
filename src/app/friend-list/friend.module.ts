@@ -7,6 +7,7 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
 import { FriendFeedComponent } from './friend-feed/friend-feed.component';
 import { FriendSearchBlockComponent } from './friend-search-block/friend-search-block.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PfpModalComponent } from './pfp-modal/pfp-modal.component';
 
 @NgModule({
   imports: [
@@ -16,6 +17,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  declarations: [FriendListComponent, SearchBarComponent, FriendFeedComponent, FriendSearchBlockComponent]
+  declarations: [FriendListComponent, SearchBarComponent, FriendFeedComponent, FriendSearchBlockComponent, PfpModalComponent]
 })
 export class FriendModule { }

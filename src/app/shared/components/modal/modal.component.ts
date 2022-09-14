@@ -8,10 +8,15 @@ import { ModalService } from 'src/app/shared/services/modal.service';
 })
 export class ModalComponent implements OnInit {
   @Input() title: string;
+  isTitle: boolean;
 
   constructor(public modalService: ModalService) { }
 
   ngOnInit(): void {
+    if(this.title !== ""){
+      this.isTitle = true;
+    }
+    else this.isTitle = false;
   }
 
 }

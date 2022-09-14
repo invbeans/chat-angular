@@ -3,8 +3,12 @@
   (click)="modalService.close()"
 ></div>
 <div
-  class="w-[600px] fixed top-20 text-yellow-50 bg-modal-bg left-1/2 -translate-x-1/2"
+  [ngClass]="{
+    'w-[600px]': isTitle,
+    'w-fit': !isTitle
+  }"
+  class="fixed top-20 text-yellow-50 bg-modal-bg left-1/2 -translate-x-1/2"
 >
-  <h1 class="mb-5 ml-5 mt-5">{{title}}</h1>
+  <h1 class="mb-5 ml-5 mt-5" *ngIf="isTitle">{{title}}</h1>
   <ng-content></ng-content>
 </div>

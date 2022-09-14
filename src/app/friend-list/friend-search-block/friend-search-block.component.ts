@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IFriend } from 'src/app/shared/models/friend';
 
 @Component({
@@ -8,9 +8,14 @@ import { IFriend } from 'src/app/shared/models/friend';
 })
 export class FriendSearchBlockComponent implements OnInit {
   @Input() friend: IFriend;
+  @Output() isModal: EventEmitter<number> = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  openModal(){
+    this.isModal.emit(this.friend.id);
   }
 
 }

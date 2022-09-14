@@ -2,6 +2,7 @@
   <img
     src="{{friend.pfp}}"
     class="rounded-full h-[22vh] shadow-lg"
+    (click)="openModal()"
   >
   <div class="flex flex-col pl-5 justify-between">
     <p>{{friend.nickname}}</p>
